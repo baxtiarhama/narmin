@@ -1,1 +1,1 @@
-# simple-php-mysql-crud-project
+# simple-php-mysql-crud
