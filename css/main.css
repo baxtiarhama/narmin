@@ -1,0 +1,11 @@
+*{
+    direction: rtl;
+    font-family: "UniQAIDAR_OMAR";
+  }
+  .my-img:hover{
+    filter: grayscale(0%)!important;
+  }
+  .card-texts{
+    border-radius: 10px;
+    font-size: 25px;
+  }
