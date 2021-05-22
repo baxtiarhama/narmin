@@ -1,6 +1,17 @@
+body{
+  margin: auto;
+ 
+}
+
 *{
     direction: rtl;
     font-family: "UniQAIDAR_OMAR";
+  }
+  h2{
+    padding-top: 8px;
+  }
+  .error{
+    color:red;
   }
   .my-img:hover{
     filter: grayscale(0%)!important;

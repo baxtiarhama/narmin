@@ -1,5 +1,5 @@
 <?php
-$con = mysqli_connect('localhost','root','noname79','poshin');
+include("admin/connection.php");
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -11,6 +11,7 @@ $con = mysqli_connect('localhost','root','noname79','poshin');
   <link rel="stylesheet" href="./css/bootstrap.min.css">
   <link rel="stylesheet" href="./css/bootstrap.css">
   <link rel="stylesheet" href="./css/main.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
   <link href="http://services.webchin.org/web-fonts/web-font?font=droidkufiregular" rel="stylesheet" type="text/css">
   <style>
     * {
@@ -164,44 +165,20 @@ $con = mysqli_connect('localhost','root','noname79','poshin');
         <div class="row">
           <div class="col text-right">
             <p class="lead text-right">
-              پۆشین براندێکی جل و بەرگە و ماوەی ٣ ساڵە کار دەکات و تایبەتمەندی خۆی هەیە
+            پۆشین براندێکی جل و بەرگە و ماوەی ٣ ساڵە کار دەکات و تایبەتمەندی خۆی هەیە
+               کە لە ماوەیەکی کەمدا توانی خۆی بناسێنێ  ڕۆژ بە ڕۆژ زیاتر پەرەدەسێنێ
+                بەرەو پێش دەچێ لە ڕووی شێواز و جوانترین جۆری مۆدێل و لە هەمان کاتدا
+                نرخی هەموو جۆرە کاڵاکانی گونجاندووە بۆ بەکارهێنەرەکانی.
+            </p>
             </p>
           </div>
         </div>
-        <div class="row">
-          <div class="col">
-            <p class="lead text-right" style="direction: rtl;">
-              Lorem, ipsum dolor sit amet consectetur adipisicing elit. Deleniti recusandae nobis iure, odit cumque
-              dolorem est sint placeat corrupti provident laboriosam eligendi et veniam at ducimus tempore nulla
-              accusamus laborum.
-              Lorem, ipsum dolor sit amet consectetur adipisicing elit. Deleniti recusandae nobis iure, odit cumque
-              dolorem est sint placeat corrupti provident laboriosam eligendi et veniam at ducimus tempore nulla
-              accusamus laborum.
-              Lorem, ipsum dolor sit amet consectetur adipisicing elit. Deleniti recusandae nobis iure, odit cumque
-              dolorem est sint placeat corrupti provident laboriosam eligendi et veniam at ducimus tempore nulla
-              accusamus laborum.
-            </p>
-          </div>
-        </div>
+      
       </div>
     </div>
   </div>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+  <hr>
+<?php include("templates/footer.php");?>
   <script src="./js/jquery-3.4.1.slim.min.js"></script>
   <script src="./js/popper.min.js"></script>
   <script src="./js/bootstrap.min.js"></script>

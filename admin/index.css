@@ -1,0 +1,16 @@
+body{
+    padding:50px ;
+    margin: auto;
+    background-color: skyblue;
+}
+
+hr{
+    width:50%;
+    color: black;
+
+}
+h3{
+    text-align: center;
+    color: white;
+    text-shadow: 1px 10px 4px #030303;
+}

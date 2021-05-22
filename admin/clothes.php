@@ -1,5 +1,11 @@
 <?php
-$con = mysqli_connect('localhost','root','','poshin');
+if (empty($_COOKIE['user'])) {
+    # code...
+    header('Location:../login.php');
+}
+include("connection.php");
+
+
 
 if (!empty($_POST['add'])) {
     $clothe_name = $_POST['clothe_name'];

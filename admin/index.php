@@ -1,3 +1,9 @@
+<?php
+if (empty($_COOKIE['user'])) {
+    # code...
+    header('Location:../login.php');
+}
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -7,6 +13,7 @@
     <link rel="stylesheet" href="../css/bootstrap.min.css">
     <link rel="stylesheet" href="../css/bootstrap.css">
     <link rel="stylesheet" href="../css/main.css">
+    <link rel="stylesheet" href="index.css">
     <link href="http://services.webchin.org/web-fonts/web-font?font=droidkufiregular" rel="stylesheet" type="text/css">
     <style>
         * {
@@ -16,27 +23,27 @@
 </head>
 
 <body>
-    <div class="container">
-        <div class="row my-5">
-            <h3 class="text-center">پۆشین - پەڕەی بەڕێوەبەر</h3>
-        </div>
+
+    <div class="container ">
+            <h3>پۆشین - پەڕەی بەڕێوەبەر:</h3>
+        </div> <hr > <br> <br><br>
         <div class="row">
             <div class="col">
                 <div class="card text-right">
-                    <div class="card-body">
+                    <div class="card-body bg-warning">
                         <h4 class="card-title">جل و بەرگ</h4>
                         <p class="card-text">
-                            <a class="btn btn-primary" href="./clothes.php" role="button">جل و بەرگ</a>
+                            <a class="btn btn-danger" href="./clothes.php" role="button">جل و بەرگ</a>
                         </p>
                     </div>
                 </div>
             </div>
             <div class="col">
                 <div class="card text-right">
-                    <div class="card-body">
+                    <div class="card-body bg-warning">
                         <h4 class="card-title">براندەکان</h4>
                         <p class="card-text">
-                            <a class="btn btn-primary" href="./brands.php" role="button">براندەکان</a>
+                            <a class="btn btn-danger" href="./brands.php" role="button">براندەکان</a>
                         </p>
                     </div>
                 </div>

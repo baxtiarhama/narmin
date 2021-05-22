@@ -1,16 +1,19 @@
 <?php
-$con = mysqli_connect('localhost','root','','poshin');
-
-$msg = '';
+include("admin/connection.php");
+$error = '';
 if (!empty($_POST['login'])) {
     $user_email = $_POST['user_email'];
     $user_password = $_POST['user_password'];
+   
     $query = mysqli_query($con , "SELECT * FROM users WHERE user_email = '$user_email' AND user_password = '$user_password'");
     if (mysqli_num_rows($query) > 0) {
-        # code...
+        # code..
+        setcookie('user' , $user_email);
         header('Location:./admin/index.php');
+        mysqli_close($con);
     }else{
-        $msg = 'ئیمەیڵ یان وشەی نهێنی هەڵەیە';
+        $error = '<b class="error">ئیمەیڵ یان وشەی نهێنی هەڵەیە</b>';
+
     }
 }
 ?>
@@ -32,15 +35,16 @@ if (!empty($_POST['login'])) {
     </style>
 </head>
 
-<body>
+<body style="background: url(img/admin5.jpg); background-size:cover">
     <div class="container">
-        <div class="row justify-content-center align-items-center" style="height:100vh">
+        <div class="row justify-content-right align-items-center" style="height:100vh">
             <div class="col-4">
-                <div class="card text-right">
-                    <div class="card-title text-center">
+                <div class="card text-right bg-info ">
+                    <div class="card-title text-center text-white">
                         <h2>پۆشین</h2>
                     </div>
-                    <div class="card-body">
+                    <div class="card-title text-center text-white ">
+                    <div class="card-body bg-dark ">
                         <form action="" method="post" autocomplete="off">
                             <div class="form-group">
                                 <label>ئیمەیڵ</label>
@@ -50,10 +54,10 @@ if (!empty($_POST['login'])) {
                                 <label>وشەی نهێنی</label>
                                 <input type="password" class="form-control" name="user_password">
                             </div>
-                            <button type="submit" value="login" name="login" class="btn btn-primary btn-block">چونەژورەوە</button>
+                            <button type="submit" value="login" name="login" class="btn btn-info btn-block">چونەژورەوە</button>
                         </form>
                         <br>
-                        <p><?php echo $msg; ?></p>
+                        <p><?php echo  $error; ?></p>
                     </div>
                 </div>
             </div>
